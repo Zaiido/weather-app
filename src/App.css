@@ -1,38 +1,155 @@
-.App {
-  text-align: center;
+input.form-control {
+  border-radius: 50px;
+  background-color: transparent;
+  color: white !important;
+  border-color: white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input.form-control:focus {
+  border-color: white;
+  box-shadow: 0 0 0 0.2rem rgba(133, 194, 255, 0.25);
+  background-color: transparent;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+input.form-control::placeholder {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.current-weather {
+  margin-top: 50px;
 }
 
-@keyframes App-logo-spin {
+.current-weather-info {
+  background-color: rgba(255, 255, 255, 0.245);
+  color: white;
+  padding: 20px 50px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.current-temp {
+  font-size: 3rem;
+}
+
+.city-name {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.feels-like-temp {
+  margin-top: 15px;
+}
+
+.weather-icon img {
+  width: 300px;
+  margin-left: auto;
+}
+
+
+.animate-icon {
+  animation: animateIcon infinite 5s linear;
+}
+
+.spin-icon {
+  animation: spinIcon infinite 100s linear;
+}
+
+@keyframes animateIcon {
+  0% {
+    transform: translateX(0px);
+  }
+
+  25% {
+    transform: translateX(10px);
+  }
+
+  50% {
+    transform: translateX(20px);
+  }
+
+  75% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    transform: translateX(0px);
+
+  }
+}
+
+@keyframes spinIcon {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.hourly-weather-container {
+  background-color: rgba(255, 255, 255, 0.245);
+  width: 80%;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+img.small-icon {
+  width: 30px;
+  margin-bottom: 1.2rem;
+  margin-top: 1rem;
+}
+
+.hourly-weather {
+  color: white;
+  margin-top: 100px;
+}
+
+.animate-small-icon {
+  animation: animateSmallIcon infinite 10s linear;
+}
+
+.spin-small-icon {
+  animation: spinSmallIcon infinite 50s linear;
+}
+
+@keyframes animateSmallIcon {
+  0% {
+    transform: translateX(0px);
+  }
+
+  25% {
+    transform: translateX(5px);
+  }
+
+  50% {
+    transform: translateX(10px);
+  }
+
+  75% {
+    transform: translateX(-5px);
+  }
+
+  100% {
+    transform: translateX(0px);
+
+  }
+}
+
+@keyframes spinSmallIcon {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.small-temp {
+  font-size: 1.1rem;
+  margin-top: 20px;
 }
